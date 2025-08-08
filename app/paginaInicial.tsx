@@ -10,6 +10,9 @@ export default function PaginaInicial() {
   const [fontsLoaded] = useFonts({
     'Quicksand-Medium': require('../assets/fonts/Quicksand-Medium.ttf'),
     'Quicksand-Bold': require('../assets/fonts/Quicksand-Bold.ttf'),
+    'Helvetica': require('../assets/fonts/Helvetica.ttf'),
+    'Helvetica-Bold': require('../assets/fonts/Helvetica-Bold.ttf'),
+    'Helvetica-Light': require('../assets/fonts/Helvetica-Light.ttf'),
   });
 
   useEffect(() => {
@@ -81,7 +84,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: '#FFFFFF',
     marginBottom: 30,
-    fontFamily: 'Quicksand-Bold',
+    fontFamily: 'Helvetica-Bold',
   },
   button: {
     backgroundColor: '#ff5721',
@@ -101,7 +104,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#FFFFFF',
     fontSize: 18,
-    fontFamily: 'Quicksand-Bold',
+    fontFamily: 'Helvetica-Bold',
   },
   lottie: {
     width: 300,
@@ -112,7 +115,7 @@ const styles = StyleSheet.create({
   titleRastreando: {
     fontSize: 35,
     color: '#FFFFFF',
-    fontFamily: 'Quicksand-Medium',
+    fontFamily: 'Helvetica',
     backgroundColor: '#ff5721',
     borderRadius: 50,
     paddingHorizontal: 25,
@@ -129,7 +132,7 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 25,
     color: '#FFFFFF',
-    fontFamily: 'Quicksand-Medium',
+    fontFamily: 'Helvetica',
     marginBottom: 10,
     marginTop: 10,
   },

@@ -1,9 +1,8 @@
-import { FontAwesome5 } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 import { useRouter } from 'expo-router';
 import LottieView from 'lottie-react-native';
 import React, { useEffect } from 'react';
-import { BackHandler, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { BackHandler, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function PaginaInicial() {
   const router = useRouter();
@@ -30,10 +29,12 @@ export default function PaginaInicial() {
       <StatusBar hidden={true} />
 
       <View style={styles.titleContainer}>
-        <Text style={styles.titleRastreando}>RASTREANDO</Text>
+        <Image
+          source={require('../assets/images/RastreandoNewLogo.png')}
+          style={styles.logoImage}
+          resizeMode="contain"
+        />
       </View>
-      <FontAwesome5 name="ribbon" size={40} color="#FFFFFF" />
-      <Text style={styles.subtitle}>APP</Text>
       <View style={styles.subcontainer}>
         <LottieView
           source={require('../assets/lottie/logo.json')}
@@ -61,25 +62,38 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#232d97',
+    backgroundColor: '#ffffff',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 12 },
+    shadowOpacity: 0.25,
+    shadowRadius: 16,
+    elevation: 24,
   },
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 12 },
+    shadowOpacity: 0.25,
+    shadowRadius: 16,
+    elevation: 24,
   },
   subcontainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#3949AB',
-    borderRadius: 15,
-    padding: -20,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 1,
-    shadowRadius: 8,
-    elevation: 5,
-  },
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: '#ffffff', // corrigido
+  borderRadius: 10,
+  // Sombra para iOS
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 12 },
+  shadowOpacity: 0.25,
+  shadowRadius: 16,
+  // Sombra para Android
+  elevation: 24,
+  borderWidth: 2,
+  borderColor: '#3949AB',
+},
   title: {
     fontSize: 24,
     color: '#FFFFFF',
@@ -90,7 +104,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ff5721',
     paddingVertical: 10,
     paddingHorizontal: 40,
-    borderRadius: 25,
+    borderRadius: 5,
     marginVertical: 5,
     width: '80%',
     alignItems: 'center',
@@ -109,29 +123,34 @@ const styles = StyleSheet.create({
   lottie: {
     width: 300,
     height: 300,
-    marginBottom: -60,
+    marginBottom: -100,
     marginTop: -60,
   },
+  logoImage: {
+    width: 310,
+    height: 210,
+    alignSelf: 'center',
+    marginBottom: -40,
+  },
   titleRastreando: {
-    fontSize: 35,
-    color: '#FFFFFF',
-    fontFamily: 'Helvetica',
-    backgroundColor: '#ff5721',
-    borderRadius: 50,
-    paddingHorizontal: 25,
-    paddingVertical: 10,
-    textAlign: 'center',
-    lineHeight: 50,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 10 },
-    shadowOpacity: 1,
-    shadowRadius: 30,
-    elevation: 10,
-    marginBottom: 5,
+  fontSize: 35,
+  color: '#FFFFFF',
+  fontFamily: 'Helvetica-Light',
+  backgroundColor: '#ff5721',
+  borderRadius: 10,
+  paddingHorizontal: 25,
+  paddingVertical: 5,
+  textAlign: 'center',
+  lineHeight: 70,
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 10 },
+  shadowOpacity: 1,
+  shadowRadius: 30,
+  elevation: 10,
   },
   subtitle: {
     fontSize: 25,
-    color: '#FFFFFF',
+    color: '#f9dd0bff',
     fontFamily: 'Helvetica',
     marginBottom: 10,
     marginTop: 10,

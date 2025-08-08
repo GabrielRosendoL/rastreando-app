@@ -46,10 +46,10 @@ export default function PaginaInicial() {
         <Text style={styles.title}>Bem-vindo(a)!</Text>
 
         <TouchableOpacity style={styles.button} onPress={() => router.push('/Login/TelaLogin')}>
-          <Text style={styles.buttonText}>Login</Text>
+          <Text style={styles.buttonText}>Ir para Login</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => router.push('/Cadastro/TelaCadastro')}>
+        <TouchableOpacity style={styles.buttonCad} onPress={() => router.push('/Cadastro/TelaCadastro')}>
           <Text style={styles.buttonText}>Cadastre-se</Text>
         </TouchableOpacity>
       </View>
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: 'white',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 12 },
     shadowOpacity: 0.25,
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   subcontainer: {
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: '#ffffff', // corrigido
+  backgroundColor: 'white', // corrigido
   borderRadius: 10,
   // Sombra para iOS
   shadowColor: '#000',
@@ -92,13 +92,14 @@ const styles = StyleSheet.create({
   // Sombra para Android
   elevation: 24,
   borderWidth: 2,
-  borderColor: '#3949AB',
+  borderColor: '#a4a4a4ff',
+  paddingBottom: 20
 },
   title: {
-    fontSize: 24,
-    color: '#FFFFFF',
+    fontSize: 18,
+    color: '#3949AB',
     marginBottom: 30,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Quicksand-Bold',
   },
   button: {
     backgroundColor: '#ff5721',
@@ -115,27 +116,43 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 5,
   },
+  buttonCad: {
+    backgroundColor: '#3949AB',
+    paddingVertical: 10,
+    paddingHorizontal: 40,
+    borderRadius: 5,
+    marginVertical: 5,
+    width: '80%',
+    alignItems: 'center',
+    marginBottom: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 1,
+    shadowRadius: 8,
+    elevation: 5,
+  },
   buttonText: {
     color: '#FFFFFF',
-    fontSize: 18,
-    fontFamily: 'Helvetica-Bold',
+    fontSize: 16,
+    fontFamily: 'Quicksand-Bold',
   },
   lottie: {
     width: 300,
     height: 300,
-    marginBottom: -100,
+    marginBottom: -90,
     marginTop: -60,
   },
   logoImage: {
-    width: 310,
-    height: 210,
+    width: 410,
+    height: 310,
     alignSelf: 'center',
-    marginBottom: -40,
+    marginBottom: -80,
+    marginTop: -100,
   },
   titleRastreando: {
   fontSize: 35,
   color: '#FFFFFF',
-  fontFamily: 'Helvetica-Light',
+  fontFamily: 'Quicksand-Bold',
   backgroundColor: '#ff5721',
   borderRadius: 10,
   paddingHorizontal: 25,
@@ -151,7 +168,7 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 25,
     color: '#f9dd0bff',
-    fontFamily: 'Helvetica',
+    fontFamily: 'Quicksand-Bold',
     marginBottom: 10,
     marginTop: 10,
   },

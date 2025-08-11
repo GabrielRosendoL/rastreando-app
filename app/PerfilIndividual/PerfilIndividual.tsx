@@ -78,6 +78,9 @@ export default function PerfilIndividual() {
             <TouchableOpacity style={styles.confirmButton} onPress={confirmarEscolha}>
                 <Text style={styles.confirmButtonText}>Confirmar</Text>
             </TouchableOpacity>
+            <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+                <Text style={styles.backButtonText}>Voltar</Text>
+            </TouchableOpacity>
         </View>
     );
 }
@@ -144,5 +147,20 @@ const styles = StyleSheet.create({
         height: 300,
         marginBottom: -30,
         marginTop: -30,
+    },
+    backButton: {
+        backgroundColor: '#cccccc',
+        paddingVertical: 8,
+        paddingHorizontal: 24,
+        borderRadius: 18,
+        alignItems: 'center',
+        marginTop: 8,
+        alignSelf: 'center',
+        width: 120,
+    },
+    backButtonText: {
+        color: '#232d97',
+        fontSize: 15,
+        fontFamily: 'Quicksand-Bold',
     },
 });

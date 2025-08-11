@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#3949AB',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 12 },
     shadowOpacity: 0.25,
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   subcontainer: {
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: 'white', // corrigido
+  backgroundColor: 'white', 
   borderRadius: 10,
   // Sombra para iOS
   shadowColor: '#000',
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   // Sombra para Android
   elevation: 24,
   borderWidth: 2,
-  borderColor: '#a4a4a4ff',
+  borderColor: 'white',
   paddingBottom: 20
 },
   title: {

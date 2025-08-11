@@ -5,6 +5,7 @@ export default function Layout() {
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="splashScreen" />
       <Stack.Screen name="paginaInicial" />
+      <Stack.Screen name="PerfilIndividual" />
     </Stack>
   );
 }

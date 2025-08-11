@@ -1,10 +1,10 @@
-// import { Stack } from 'expo-router';
+import { Stack } from 'expo-router';
 
-// export default function Layout() {
-//   return (
-//     <Stack screenOptions={{ headerShown: false }}>
-//       <Stack.Screen name="splashScreen" />
-//       <Stack.Screen name="paginaInicial" />
-//     </Stack>
-//   );
-// }
+export default function Layout() {
+  return (
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="splashScreen" />
+      <Stack.Screen name="paginaInicial" />
+    </Stack>
+  );
+}

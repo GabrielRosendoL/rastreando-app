@@ -1,4 +1,4 @@
-import { Ionicons } from '@expo/vector-icons'; // Biblioteca de ícones
+import { Ionicons } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { signOut } from 'firebase/auth';

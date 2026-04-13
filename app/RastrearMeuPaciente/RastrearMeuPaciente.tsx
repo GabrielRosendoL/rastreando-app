@@ -1,4 +1,4 @@
-import { FontAwesome5 } from '@expo/vector-icons'; // Pacote de ícones
+import { FontAwesome5 } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 import { useRouter } from 'expo-router';
 import { doc, updateDoc } from "firebase/firestore";

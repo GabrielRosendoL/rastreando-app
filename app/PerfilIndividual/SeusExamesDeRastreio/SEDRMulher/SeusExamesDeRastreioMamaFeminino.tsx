@@ -207,7 +207,6 @@ export default function SeusExamesDeRastreioMamaFeminino() {
                 onCancel={hideDatePicker}
             />
 
-            {/* Modal para exibir imagem ampliada */}
             <Modal visible={isImageModalVisible} transparent={true} onRequestClose={closeImageModal}>
                 <View style={styles.imageModalContainer}>
                     {selectedImageUri && (
